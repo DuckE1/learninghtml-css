@@ -1,0 +1,36 @@
+<header>
+<nav>
+<section>
+<article>
+<aside>
+<footer>
+<details>
+<summary> 
+
+<header> - Defines a header for a document or a section
+<nav> - Defines a set of navigation links
+<section> - Defines a section in a document
+<article> - Defines independent, self-contained content
+<aside> - Defines content aside from the content (like a sidebar)
+<footer> - Defines a footer for a document or a section
+<details> - Defines additional details that the user can open and close on demand
+<summary> - Defines a heading for the <details> element
+
+HTML LAYOUT TECHNIQUES 
+
+CSS framework 
+
+CSS float property
+Es comun hacer los layouts de una web usando la propiedad "float" de CSS. Float es facil
+de usar y aprender, solo necesitas recordad como las propiedades "float" y "clear"
+funcionan. Las desventajas de float: Los documentos flotantes estan atados al flujo del
+documento (o pagina) la cual fuerza la flexibilidad del mismo a ser de una sola manera.
+
+
+CSS flexbox
+
+El uso de flexbox asegura que el comportamiento de cada elemento se acomode predictiva
+mente cuando la pagina deba acomodarse a diferentes tamaños de pantallas y desplegarse
+en distintos dispositivos
+
+CSS grid

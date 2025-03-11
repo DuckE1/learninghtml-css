@@ -3,109 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animación de Vela con Partículas</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #1a1a1a;
-        }
-
-        .candle {
-            position: relative;
-            width: 30px;
-            height: 100px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        .flame {
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 15px;
-            height: 40px;
-            background-color: #ffcc00;
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            box-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00, 0 0 60px #ffcc00;
-            animation: flicker 1.5s infinite alternate;
-        }
-
-        @keyframes flicker {
-            0% {
-                transform: translateX(-50%) scale(1);
-            }
-            50% {
-                transform: translateX(-50%) scale(1.1);
-            }
-            100% {
-                transform: translateX(-50%) scale(0.9);
-            }
-        }
-
-        .particle {
-            position: absolute;
-            width: 3px; /* Tamaño un poco más grande */
-            height: 3px;
-            background-color: #ffcc00;
-            border-radius: 50%;
-            opacity: 1;
-        }
-    </style>
+    <title>Screen Sizes</title>
 </head>
 <body>
-    <div class="candle">
-        <div class="flame"></div>
-    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sunt debitis expedita autem. Incidunt quibusdam eos reiciendis unde perferendis cum minus harum facilis, veniam hic est in, voluptate impedit suscipit?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae, fugiat quisquam soluta error consequuntur eveniet neque, earum adipisci porro quos numquam, magnam provident delectus quasi! Numquam molestias eius consectetur!Loremlorem!Lorem
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur earum delectus nam accusamus ut quam quisquam repellendus ducimus itaque, consequatur voluptatibus reiciendis numquam iste alias facilis dicta ex animi rem?
+    </p>
 
-    <!-- Incluir GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script>
-        // Obtener el contenedor de la vela y la llama
-        const candle = document.querySelector('.candle');
-        const flame = document.querySelector('.flame');
-
-        function createParticle() {
-            // Crear la partícula
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            candle.appendChild(particle);
-
-            // Obtener la posición de la llama
-            const flameRect = flame.getBoundingClientRect();
-            const candleRect = candle.getBoundingClientRect();
-
-            // Posición inicial de la partícula (justo encima de la llama)
-            const startX = flameRect.left - candleRect.left + flameRect.width / 2;
-            const startY = flameRect.top - candleRect.top - 5;  // 5px por encima de la llama
-
-            // Animación de la partícula con GSAP
-            gsap.fromTo(particle, {
-                x: startX + (Math.random() * 10 - 5),  // Pequeña variación en X
-                y: startY,
-                opacity: 0.5,
-                scale: Math.random() * 0.5 + 0.5,  // Escala aleatoria entre 0.5 y 1
-            }, {
-                x: startX + (Math.random() * 40 - 20),  // Mayor dispersión en X
-                y: startY - 100 + (Math.random() * 20),  // Subir hacia arriba con variación
-                opacity: 0,
-                scale: 0.2,
-                duration: Math.random() * 1.5 + 0.5,  // Duración más corta y aleatoria
-                ease: 'power1.out',
-                onComplete: () => {
-                    particle.remove();  // Eliminar la partícula al finalizar la animación
-                }
-            });
-        }
-
-        // Crear partículas cada 100ms (más frecuente)
-        setInterval(createParticle, 600);
-    </script>
+    <img src="Layout/Screenshot_7.png">
 </body>
 </html>
