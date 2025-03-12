@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Screen Sizes</title>
-</head>
-<body>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sunt debitis expedita autem. Incidunt quibusdam eos reiciendis unde perferendis cum minus harum facilis, veniam hic est in, voluptate impedit suscipit?
+  </head>
+  <body>
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sunt debitis expedita autem. Incidunt quibusdam eos reiciendis unde perferendis cum minus harum facilis, veniam hic est in, voluptate impedit suscipit?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae, fugiat quisquam soluta error consequuntur eveniet neque, earum adipisci porro quos numquam, magnam provident delectus quasi! Numquam molestias eius consectetur!Loremlorem!Lorem
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur earum delectus nam accusamus ut quam quisquam repellendus ducimus itaque, consequatur voluptatibus reiciendis numquam iste alias facilis dicta ex animi rem?
     </p>
@@ -14,6 +14,39 @@
     <div>
         <img src="Layout/Screenshot_7.png" alt="Screen sizes image" style="width: 100%;max-width: 960px;">
         <p>This is a image</p>
+    </div> -->
+
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores id
+        officia perspiciatis hic? Voluptatum reiciendis deserunt eaque animi
+        deleniti saepe accusantium et obcaecati molestiae architecto omnis,
+        doloribus neque harum quae.
+      </p>
+      <img
+        src="Layout/Screenshot_7.png"
+        alt="Screen sizes image"
+        style="width: 100%; height: auto"
+      />
     </div>
-</body>
+
+    <!-- La etiqueta picture te permite definir diferentes imagenes para diferentes tamaños de dispositivo -->
+    <picture>
+      <source
+        srcset="Layout/img_smallflower.jpg"
+        media="(max-width: 600px)"
+      />
+      <source
+        srcset="Layout/img_flowers.jpg"
+        media="(max-width: 1000px)"
+      />
+      <source 
+      srcset="Layout/flowers.jpg">
+      <img
+        src="/Layout/flowers.jpg"
+        alt="Flowers"
+        style="width: 100%; height: auto"
+      />
+    </picture>
+  </body>
 </html>
